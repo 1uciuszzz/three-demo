@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Canvas } from "@react-three/fiber";
 
 const App = () => {
   return (
-    <div id="canvas-container">
+    <div>
       <Canvas />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
