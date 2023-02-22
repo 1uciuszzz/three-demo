@@ -9,21 +9,25 @@ specifiers:
   autoprefixer: ^10.4.13
   axios: ^1.3.3
   cesium: ^1.102.0
+  lodash: ^4.17.21
   postcss: ^8.4.21
   react: ^18.2.0
   react-dom: ^18.2.0
   sass: ^1.58.2
   tailwindcss: ^3.2.7
   three: ^0.149.0
+  tweakpane: ^3.1.4
   vite: ^4.1.0
 
 dependencies:
   '@react-three/fiber': 8.11.2_xor7byvqlg4baqj6ymfbcmaax4
   axios: 1.3.3
   cesium: 1.102.0
+  lodash: 4.17.21
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   three: 0.149.0
+  tweakpane: 3.1.4
 
 devDependencies:
   '@types/react': 18.0.28
@@ -1162,6 +1166,10 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /lodash/4.17.21:
+    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+    dev: false
+
   /long/5.2.1:
     resolution: {integrity: sha512-GKSNGeNAtw8IryjjkhZxuKB3JzlcLTwjtiQCHKvqQet81I93kXslhDQruGI/QsddO83mcDToBVy7GqGS/zYf/A==}
     dev: false
@@ -1590,6 +1598,10 @@ packages:
 
   /tslib/2.5.0:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: false
+
+  /tweakpane/3.1.4:
+    resolution: {integrity: sha512-YCEU6wn3uGMYlD63Lkh7Ahhiw1BzlKX4LOQKRGopHL8YEhOBbjiPVY95wXC1TwgoBpBhRGcfRwtbCRA8fkdO2A==}
     dev: false
 
   /update-browserslist-db/1.0.10_browserslist@4.21.5:
