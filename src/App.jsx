@@ -7,6 +7,7 @@ import {
   Math,
   Color,
   Rectangle,
+  GeoJsonDataSource,
 } from "cesium";
 import { useRef } from "react";
 import { useEffect } from "react";
@@ -52,7 +53,7 @@ const App = () => {
     });
     viewer.flyTo(models.at(0));
 
-    // 绑定鼠标点击获取坐标
+    // 绑定鼠标移动获取坐标
     viewer.screenSpaceEventHandler.setInputAction(
       throttle((e) => {
         const cartesian = viewer.camera.pickEllipsoid(
@@ -70,6 +71,24 @@ const App = () => {
       }, 1000),
       ScreenSpaceEventType.MOUSE_MOVE
     );
+
+    let entities;
+    var promise = GeoJsonDataSource.load("Model/export.geojson", {
+      clampToGround: true,
+    });
+    promise.then(function (dataSource) {
+      var shenzhenhousevalue = viewer.dataSources.add(dataSource);
+      entities = dataSource.entities.values;
+      viewer.zoomTo(entities);
+      for (var i = 0; i < entities.length; i++) {
+        var entity = entities[i];
+        entity.polygon.extrudedHeight = 40;
+        entity.polygon.name = entity._name;
+        entity.polygon.material = Color.GAINSBORO;
+        entity.polygon.outline = false;
+        entity.polygon.outlineColor = Color.GAINSBORO;
+      }
+    });
 
     // 初始化面板
     const pane = new Pane();

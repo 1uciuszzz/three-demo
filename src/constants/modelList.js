@@ -282,8 +282,8 @@ const modelList = [
   {
     positionLon: 114.054617983413,
     positionLat: 22.53336814594387,
-    name: "深圳地下WGS84",
-    uri: "/Model/深圳地下WGS84/深圳地下WGS84.gltf",
+    name: "深圳地下",
+    uri: "/Model/深圳地下/深圳地下.gltf",
   },
 ];
 
