@@ -25,3 +25,6 @@ dist-ssr
 
 # large static resources
 public/Model
+
+# package
+*.zip
