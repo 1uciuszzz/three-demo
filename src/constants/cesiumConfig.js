@@ -17,7 +17,7 @@ const CESIUM_CONFIG = {
   baseLayerPicker: false,
   fullscreenButton: false,
   // vrButton: false,
-  geocoder: false,
+  geocoder: true,
   homeButton: false,
   infoBox: false,
   // sceneModePicker: true,

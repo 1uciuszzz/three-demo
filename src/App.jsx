@@ -21,6 +21,7 @@ import { throttle } from "lodash";
 
 const App = () => {
   const cesiumContainer = useRef(null);
+  const paneContainer = useRef(null);
 
   const [location, setLocation] = useState({
     latitude: 0,
@@ -93,7 +94,7 @@ const App = () => {
     // });
 
     // 初始化面板;
-    const pane = new Pane();
+    const pane = new Pane({ container: paneContainer.current });
     pane.addInput(viewer.scene.globe.translucency, "frontFaceAlpha", {
       label: "地表透明度",
       max: 1,
@@ -114,8 +115,9 @@ const App = () => {
 
   return (
     <div className="relative">
-      <div ref={cesiumContainer}></div>
-      <div className="w-full absolute bottom-0 left-0 bg-white flex gap-4 px-4">
+      <div ref={cesiumContainer} className="w-screen h-screen"></div>
+      <div ref={paneContainer} className="absolute right-4 bottom-4 z-20"></div>
+      <div className="w-full absolute bottom-0 left-0 bg-white flex gap-4 px-4 z-10">
         <p>
           经度：<span className="font-mono">{location.longitude}</span>
         </p>
